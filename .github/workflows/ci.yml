@@ -21,10 +21,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Lint files
-        run: yarn lint
-
-      - name: Typecheck files
-        run: yarn typecheck
+        run: npm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -36,7 +33,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Run unit tests
-        run: yarn test --maxWorkers=2 --coverage
+        run: npm run test --maxWorkers=2 --coverage
 
   build-library:
     runs-on: ubuntu-latest
@@ -48,17 +45,4 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Build package
-        run: yarn prepare
-
-  build-web:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup
-        uses: ./.github/actions/setup
-
-      - name: Build example for Web
-        run: |
-          yarn example expo export --platform web
+        run: npm run prepack

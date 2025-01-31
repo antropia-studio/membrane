@@ -1,3 +1,9 @@
-export function multiply(a: number, b: number): number {
-  return a * b;
-}
+import { PagerSwipe } from './commands/index.js';
+import { launch } from './detox/launch';
+
+export const Membrane = {
+  commands: { PagerSwipe },
+  launch,
+};
+
+export default Membrane;

@@ -71,6 +71,10 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "dependencies": {
+    "detox": "^20",
+    "fast-check": "^3.23.2"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/eslintrc": "^3.2.0",
@@ -100,6 +104,8 @@
     "@types/react": "^18.2.44"
   },
   "peerDependencies": {
+    "detox": "^20",
+    "fast-check": "^3",
     "react": "*",
     "react-native": "*"
   },
