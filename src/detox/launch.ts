@@ -4,6 +4,7 @@ import { setDemoMode } from '../device/demo.js';
 import { type DetoxMatcher, getElement } from './matcher.js';
 
 export interface LaunchProps {
+  reloadReactNative?: boolean;
   waitForMatcher?: DetoxMatcher;
 }
 
@@ -21,10 +22,17 @@ export interface LaunchProps {
  * @returns Resolves when the application has finished launching and the
  *          optional wait condition has been satisfied.
  */
-export const launch = async ({ waitForMatcher }: LaunchProps) => {
-  await device.launchApp();
+export const launch = async ({
+  reloadReactNative,
+  waitForMatcher,
+}: LaunchProps) => {
+  if (reloadReactNative) {
+    await device.reloadReactNative();
+  } else {
+    await device.launchApp();
+  }
+
   await setDemoMode();
-  await device.reloadReactNative();
 
   if (waitForMatcher) {
     await waitFor(getElement(waitForMatcher)).toBeVisible().withTimeout(5000);

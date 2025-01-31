@@ -1,11 +1,11 @@
-import { PagerSwipe } from './commands/index.js';
+import { PagerSwipe, Tap } from './commands/index.js';
 import { launch } from './detox/launch';
 
-export { type PagerSwipeProps } from './commands/index.js';
+export { type PagerSwipeProps, type TapProps } from './commands/index.js';
 export { type LaunchProps } from './detox/launch.js';
 
 export const Membrane = {
-  commands: { PagerSwipe },
+  commands: { PagerSwipe, Tap },
   launch,
 };
 

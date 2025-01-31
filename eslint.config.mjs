@@ -38,14 +38,16 @@ export default tseslint.config(
     },
     rules: {
       '@typescript-eslint/no-empty-object-type': 'off',
-      /**
-       * Not the best practice to disable this rule, but the theming is quite complex without using any.
-       * On top of that, I tried to use eslint-disable-line in those places where any is required and... the
-       * current version of eslint just ignore them (it reports an unused eslint-disable-line AND the no-explicit-any
-       * rule.
-       */
-      '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-namespace': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
       'json-files/sort-package-json': 'error',
       'no-await-in-loop': 'off',
       'perfectionist/sort-imports': 'error',
