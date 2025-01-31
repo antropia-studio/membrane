@@ -3,7 +3,7 @@ import { device } from 'detox';
 import { setDemoMode } from '../device/demo.js';
 import { type DetoxMatcher, getElement } from './matcher.js';
 
-interface LaunchProps {
+export interface LaunchProps {
   waitForMatcher?: DetoxMatcher;
 }
 

@@ -3,7 +3,7 @@ import { type AsyncCommand } from 'fast-check';
 
 import { type DetoxMatcher, getElement } from '../detox/matcher.js';
 
-interface ConstructorProps {
+export interface PagerSwipeProps {
   direction: Direction;
   matcher: Detox.NativeMatcher | string;
   numberOfPages: number;
@@ -16,7 +16,7 @@ export class PagerSwipe implements AsyncCommand<Model, never> {
   private readonly matcher: DetoxMatcher;
   private readonly numberOfPages: number;
 
-  constructor({ direction, matcher, numberOfPages }: ConstructorProps) {
+  constructor({ direction, matcher, numberOfPages }: PagerSwipeProps) {
     this.matcher = matcher;
     this.direction = direction;
     this.numberOfPages = numberOfPages;
