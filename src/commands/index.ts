@@ -1,2 +1,2 @@
-export * from './PagerSwipe.js';
+export * from './Swipe.js';
 export * from './Tap.js';

@@ -72,11 +72,12 @@
     "access": "public"
   },
   "dependencies": {
+    "@madeja-studio/cepillo": "^0.5.0",
     "detox": "^20",
-    "fast-check": "^3.23.2"
+    "fast-check": "^3"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/config-conventional": "^19.7.1",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.19.0",
     "@evilmartians/lefthook": "^1.10.10",
@@ -84,7 +85,7 @@
     "@release-it/conventional-changelog": "^10.0.0",
     "@types/jest": "^29.5.14",
     "@types/react": "^18.3.18",
-    "commitlint": "^19.6.1",
+    "commitlint": "^19.7.1",
     "del-cli": "^6.0.0",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
@@ -104,6 +105,7 @@
     "@types/react": "^18.2.44"
   },
   "peerDependencies": {
+    "@madeja-studio/cepillo": "^0.5",
     "detox": "^20",
     "fast-check": "^3",
     "react": "*",
