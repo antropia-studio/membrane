@@ -1,6 +1,6 @@
 {
   "name": "@antropia/membrane",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "E2E+Property-base tests for React Native apps",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
